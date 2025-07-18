@@ -7,6 +7,7 @@ import AppLayout from './components/layout/AppLayout';
 import ErrorPage from './pages/ErrorPage';
 import getMovieData from './api/GetAPIData.JSX';
 import MovieDetails from './components/UI/MovieDetails';
+import getMoviesDetails from './api/GetMoviesDetails';
 
 const App = () => {
   // Way:2
@@ -33,6 +34,7 @@ const App = () => {
         {
           path: '/movie/:movieID',
           element: <MovieDetails />,
+          loader: getMoviesDetails,
         },
         {
           path: "contact",
@@ -43,7 +45,7 @@ const App = () => {
   ]);
 
   return (
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   )
 }
 
