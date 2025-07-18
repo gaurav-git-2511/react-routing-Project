@@ -8,11 +8,6 @@ const getMovieData = async () => {
   } catch (error) {
     console.log(error)
   }
-  return (
-    <div>
-
-    </div>
-  )
 }
 
 export default getMovieData;

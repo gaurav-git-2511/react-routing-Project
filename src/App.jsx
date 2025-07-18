@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import AppLayout from './components/layout/AppLayout';
 import ErrorPage from './pages/ErrorPage';
 import getMovieData from './api/GetAPIData.JSX';
+import MovieDetails from './components/UI/MovieDetails';
 
 const App = () => {
   // Way:2
@@ -28,6 +29,10 @@ const App = () => {
           path: '/movie',
           element: <Movie />,
           loader: getMovieData // This will fetch movie data before rendering the Movie component
+        },
+        {
+          path: '/movie/:movieID',
+          element: <MovieDetails />,
         },
         {
           path: "contact",
